@@ -1,0 +1,137 @@
+jQuery(function($) {
+    $('.slider').sss({
+    slideShow : false // Set to false to prevent SSS from automatically animating.
+    });
+
+     /*back to top*/
+     $("#scroll-top").css("display", "none");
+     $(window).scroll(function(){
+     if($(window).scrollTop() > 500){
+     console.log("is more");
+     $("#scroll-top").fadeIn("slow");
+     }
+     else {
+     console.log("is less");
+     $("#scroll-top").fadeOut("slow");
+    }
+     });
+});
+
+$(document).on('click', 'a', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top -90
+    }, 1250, 'easeInOutExpo');
+    var $root = $('html, body');
+    $('a').click(function() {
+        var href = $.attr(this, 'href');
+        $root.animate({
+            scrollTop: $(href).offset().top-90
+    }, 1250, 'easeInOutExpo', function () {
+            window.location.hash = href;
+        });
+        return false;
+    });
+});
+
+$(function(){
+ var shrinkHeader = 100;
+  $(window).scroll(function() {
+    var scroll = getCurrentScroll();
+      if ( scroll >= shrinkHeader ) {
+           $('.site-header').addClass('shrink');
+        }
+        else {
+            $('.site-header').removeClass('shrink');
+        }
+  });
+function getCurrentScroll() {
+    return window.pageYOffset || document.documentElement.scrollTop;
+    }
+});
+
+logoSize = function () {
+    // Get the real width of the logo image
+    var theLogo = $("#thelogo");
+    var newImage = new Image();
+    newImage.src = theLogo.attr("src");
+    var imgWidth = newImage.width;
+    
+    // distance over which zoom effect takes place
+    var maxScrollDistance = 1000;
+    
+    // set to window height if larger
+    maxScrollDistance = Math.min(maxScrollDistance, $(window).height());
+    
+    // width at maximum zoom out (i.e. when window has scrolled maxScrollDistance)
+    var widthAtMax = 250;
+    
+    // calculate diff and how many pixels to zoom per pixel scrolled
+    var widthDiff = imgWidth - widthAtMax;
+    var pixelsPerScroll =(widthDiff / maxScrollDistance);
+
+    $(window).scroll(function () {
+        // the currently scrolled-to position - max-out at maxScrollDistance
+        var scrollTopPos = Math.min($(document).scrollTop(), maxScrollDistance);
+        
+        // how many pixels to adjust by
+        var scrollChangePx =  Math.floor(scrollTopPos * pixelsPerScroll);
+        
+        // calculate the new width
+        var zoomedWidth = imgWidth - scrollChangePx;
+        
+        // set the width
+        $('.logo').css('width', zoomedWidth);
+    });
+}
+
+logoSize();
+
+$(document).ready(function() {
+
+  // get the action filter option item on page load
+  var $filterType = $('#filterOptions li.active a').attr('class');
+    
+  // get and assign the ourHolder element to the
+    // $holder varible for use later
+  var $holder = $('ul.ourHolder');
+
+  // clone all items within the pre-assigned $holder element
+  var $data = $holder.clone();
+
+  // attempt to call Quicksand when a filter option
+    // item is clicked
+    $('#filterOptions li a').click(function(e) {
+        // reset the active class on all the buttons
+        $('#filterOptions li').removeClass('active');
+        
+        // assign the class of the clicked filter option
+        // element to our $filterType variable
+        var $filterType = $(this).attr('class');
+        $(this).parent().addClass('active');
+        
+        if ($filterType == 'all') {
+            // assign all li items to the $filteredData var when
+            // the 'All' filter option is clicked
+            var $filteredData = $data.find('li');
+        } 
+        else {
+            // find all li elements that have our required $filterType
+            // values for the data-type element
+            var $filteredData = $data.find('li[data-type=' + $filterType + ']');
+        }
+        
+        // call quicksand and assign transition parameters
+        $holder.quicksand($filteredData, {
+            duration: 800,
+            easing: 'easeInOutQuad'
+        });
+        return false;
+    });
+});
+
+
+
+
+

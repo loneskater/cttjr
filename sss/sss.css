@@ -1,0 +1,65 @@
+.sss {
+	height: 0;
+	margin: 0; 
+	padding: 0;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+.ssslide {
+	width: 75%;
+	margin: 20px 100px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	overflow: hidden;
+}
+
+.ssslide img {
+	max-width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: block;
+}
+
+.sssnext, .sssprev {
+	position: relative;
+	margin: 9em 2em;
+	opacity: 0.2;
+}
+
+.sssprev:before, .sssnext:before {
+	font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: #fff;
+    font-size: 4em;
+    position: absolute;
+}
+
+.sssprev:before {
+	content: "\f104"
+}
+
+.sssnext:before {
+    content: "\f105";
+    right: 0;
+}
+
+.sssprev:hover, .sssnext:hover {
+	cursor: pointer;
+	color: #84d2eb;
+	opacity: 1;
+}
+
+@media (max-width: 768px) {
+	.sssnext, .sssprev {
+	}
+}
