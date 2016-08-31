@@ -20,23 +20,31 @@
 </head>
 <body>
 
-	<a id="scroll-top" href="#home"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+	<a id="scroll-top" class="scroll-top" href="#home">
+		<span class="fa-stack fa-lg">
+  		<i class="fa fa-square fa-stack-2x"></i>
+  		<i class="fa fa-angle-up fa-stack-1x"></i>
+		</span>
+	</a>
 
 	<div class="site-header">
 		<div class="site-branding">		
-			<a href="#home"><img id="thelogo" class="logo" src="images/nav-cttjr-logo.png"></a>
+			<a href="#home" class="logo"><img id="thelogo" class="logo" src="images/nav-cttjr-logo.png"></a>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" role="navigation">
-			<ul class="main-navigation">
+		<nav class="menu" role="navigation">
+			<ul class="active">
 				<li><a class="page-scroll" href="#about">About</a></li>
 				<li><a class="page-scroll" href="#services">Services</a></li>
 				<li><a class="page-scroll" href="#products">Products</a></li>
 				<li><a class="page-scroll" href="#news">News</a></li>
 				<li><a class="page-scroll" href="#contact">Contact</a></li>			
 			</ul>
+			
+			<a class="toggle-nav" href="#">&#9776;</a>
+
 		</nav><!-- .site-navigation -->
-		</div>
+	</div>
 
 	<div id="content" class="site-content">
 		<div id="home">
@@ -57,25 +65,22 @@
 				
 					<p>We offer a wide variety of products which cater to all your needs. We have a plastic products of numerous sizes and colours made from Polyvinyl Chloride ( PVC)
 					Our products are available and designed not only to corporate industry but also to mass market. We guarantee the same service and quality of plastic packaging/covers products to our customers.We also accept customization and printing of plastic bags and covers.</p>
-
-					<p>Our mission is to maintain  a consistently high level of customer satisfaction by producing the best quality products that will meet 100% customer satisfaction</p>
-
 			</div>
 			<div class="clear"></div>
 		</section>
 
 		<section id="services">
-			<div class="diamond"></div> 
-			<img class="services-img" src="images/services-feature.jpg">
+			<div class="diamond"></div>
 			
+			<div class="services-img"></div>			
 
-			<div class="container">
-			<h1>What we do</h1>
-			<h3>Offering you plastic products and packaging in a short span of time without losing its quality.</h3>
+			<div class="services-heading">
+				<h1>What we do</h1>
+				<h3>Offering you plastic products and packaging in a short span of time without losing its quality.</h3>
 			</div>
 
 			<div class="slider">
-			<ul class="block">
+			<ul class="block scroll">
 				<h2><i class="fa fa-folder-open" aria-hidden="true"></i>PVC Welded Products</h2>
 				<p>Offering you plastic products and packaging in a short span of time without losing its quality</p>
 
@@ -91,7 +96,7 @@
 				<li>Insurance Filing Folder</li>
 			</ul>
 
-			<ul class="block">
+			<ul class="block scroll">
 				<h2><i class="fa fa-briefcase" aria-hidden="true"></i>Custom Packaging</h2>
 				<p>Offering you plastic products and packaging in a short span of time without losing its quality</p>
 
@@ -104,7 +109,7 @@
 				<li>Printing Of Products</li>				
 			</ul>
 			
-			<ul class="block">
+			<ul class="block scroll">
 				<h2><i class="fa fa-shopping-bag" aria-hidden="true"></i>Bag Sewing</h2>
 				<p>Offering you plastic products and packaging in a short span of time without losing its quality</p>
 
@@ -115,9 +120,10 @@
 				<li>Pouches</li>
 				<li>Plastic Bag</li>
 			</ul> 
-			
 			</div>
+			
 			<div class="clear"></div>
+		
 		</section>
 
 		<section id="hire-us">
@@ -142,48 +148,90 @@
 			<h1>Featured Products</h1>
 			<ul id="filterOptions">
 				<li class="active"><a href="#" class="all">All</a></li>
-				<li><a href="#" class="office">Office Supplies</a></li>
-				<li><a href="#" class="school">School Supplies</a></li>
-				<li><a href="#" class="giveaway">Giveaways</a></li>
+				<li><a href="#" class="filing">Filing / Organization</a></li>
+				<li><a href="#" class="pouches">Pouches / Bags</a></li>
+				<li><a href="#" class="covers">Covers / Holders</a></li>
 			</ul>
 			
 			<ul class="ourHolder">
-				<li class="product-item" data-id="1" data-type="office">
+				<li class="product-item" data-id="1" data-type="covers">
 					<a href="#"><img src="images/certificate.jpg"></a>
-					<div class="product-name"><h3>Certicate</h3><p>Office supplies</p></div>
+					<div class="product-name"><h3>Certicate Holder</h3><p>Covers / Holders</p></div>
 				</li>
-				<li class="product-item"  data-id="2" data-type="office">
+				<li class="product-item"  data-id="2" data-type="pouches">
 					<img src="images/gift.jpg">
-					<div class="product-name"><h3>Gift</h3><p>Office supplies</p></div>
+					<div class="product-name"><h3>Gift Plastic Bag</h3><p>Pouches / Bags</p></div>
 				</li>
-				<li class="product-item"  data-id="3" data-type="office">
+				<li class="product-item"  data-id="3" data-type="covers">
 					<img src="images/license.jpg">
-					<div class="product-name"><h3>License</h3><p>Office supplies</p></div>
+					<div class="product-name"><h3>License Holder</h3><p>Covers / Holders</p></div>
 				</li>
-				<li class="product-item"  data-id="4" data-type="giveaway">
+				<li class="product-item"  data-id="4" data-type="pouches">
 					<img src="images/soap-plastic.jpg">
-					<div class="product-name"><h3>Gift 2</h3><p>Office supplies</p></div>
+					<div class="product-name"><h3>Zipper Slider Bag</h3><p>Pouches / Bags</p></div>
 				</li>
-				<li class="product-item"  data-id="5" data-type="office">
+				<li class="product-item"  data-id="5" data-type="filing">
 					<img src="images/folder.jpg">
-					<div class="product-name"><h3>Folder</h3><p>Office supplies</p></div>
+					<div class="product-name"><h3>Folder</h3><p>Filing / Organization</p></div>
 				</li>
-				<li class="product-item"  data-id="6" data-type="office">
+				<li class="product-item"  data-id="6" data-type="filing">
 					<img src="images/plastic-envelope.jpg">
-					<div class="product-name"><h3>Gift 2</h3><p>Office supplies</p></div>
+					<div class="product-name"><h3>Plastic Envelope</h3><p>Filing / Organization</p></div>
 				</li>
-				<li class="product-item"  data-id="7" data-type="school">
+				<li class="product-item"  data-id="7" data-type="pouches">
 					<img src="images/gift2.jpg">
 					<div class="product-name"><h3>Gift 2</h3><p>Office supplies</p></div>
 				</li>
-				<li class="product-item"  data-id="8" data-type="school">
+				<li class="product-item"  data-id="8" data-type="covers">
 					<img src="images/passport-plastic.jpg">
-					<div class="product-name"><h3>Gift 2</h3><p>Office supplies</p></div>
+					<div class="product-name"><h3>Passport Cover</h3><p>Covers / Holders</p></div>
 				</li>
-				<li class="product-item"  data-id="9" data-type="office">
+				<li class="product-item"  data-id="9" data-type="filing">
 					<img src="images/mini-plastic.jpg">
-					<div class="product-name"><h3>Gift 2</h3><p>Office supplies</p></div>
+					<div class="product-name"><h3>Mini Plastic envelope</h3><p>Filing / Organization</p></div>
 				</li>
+
+				<!--
+				<li class="product-item"  data-id="10" data-type="filing">
+					<img src="images/A4-plastic-pocket.jpg">
+					<div class="product-name"><h3>A4 Plastic Pocket</h3><p>Filing / Organization</p></div>
+				</li>
+				<li class="product-item"  data-id="11" data-type="filing">
+					<img src="images/card-holder2.jpg">
+					<div class="product-name"><h3>Card Holder</h3><p>Filing / Organization</p></div>
+				</li>
+				<li class="product-item"  data-id="12" data-type="filing">
+					<img src="images/card-organizer.jpg">
+					<div class="product-name"><h3>Card Organizer</h3><p>Filing / Organization</p></div>
+				</li>
+				<li class="product-item"  data-id="13" data-type="covers">
+					<img src="images/drivers-license-holder.jpg">
+					<div class="product-name"><h3>Driver's License Holder</h3><p>Covers / Holders</p></div>
+				</li>
+				<li class="product-item"  data-id="14" data-type="filing">
+					<img src="images/envelope-button.jpg">
+					<div class="product-name"><h3>Plastic Envelope with Button</h3><p>Filing / Organization</p></div>
+				</li>
+				<li class="product-item"  data-id="15" data-type="filing">
+					<img src="images/envelope-pushlock.jpg">
+					<div class="product-name"><h3>Plastic Envelope with Pushlock</h3><p>Filing / Organization</p></div>
+				</li>
+				<li class="product-item"  data-id="16" data-type="filing">
+					<img src="images/envelope-zipper.jpg">
+					<div class="product-name"><h3>Plastic Envelope with Zipper</h3><p>Filing / Organization</p></div>
+				</li>
+				<li class="product-item"  data-id="17" data-type="pouches">
+					<img src="images/pencil-case.jpg">
+					<div class="product-name"><h3>Pencil Case</h3><p>Pouches / Bags</p></div>
+				</li>
+				<li class="product-item"  data-id="18" data-type="covers">
+					<img src="images/planner.jpg">
+					<div class="product-name"><h3>Planner</h3><p>Covers / Holders</p></div>
+				</li>
+				<li class="product-item"  data-id="19" data-type="filing">
+					<img src="images/plastic-pockets.jpg">
+					<div class="product-name"><h3>Plastic Pockets</h3><p>Filing / Organization</p></div>
+				</li> 	-->
 			</ul>
 			<div class="clear"></div>
 		</section>
@@ -199,7 +247,7 @@
 			<div class="diamond"></div> 
 			
 			<div class="contact-details">
-				<h1><span class="cyan"><strong>Get</strong></span> in touch</h1>
+				<h1>Get in touch</h1>
 				<h3>We would love to hear from you!</h3>
 
 				<ul class="fa-ul">
@@ -241,7 +289,7 @@
 				<p>We offer a wide variety of products which cater to all your needs. We have plastic products of numerous sizes and colours made from Polyvinyl Chloride (PVC)</p>
 			</div>
 			
-			<div id="latest-news" class="footer-content">
+			<div class="footer-content">
 				<h3>Latest News</h3>
 				<ul class="footer-news">
 					<li><a href="#">News Title</a></li>
@@ -250,20 +298,20 @@
 				</ul>
 			</div>
 			
-			<div id="subscribe" class="footer-content">
+			<div class="footer-content">
 				<h3>Newsletter</h3>
 				<p>Subscribe for the latest news and updates.</p>
 				<input type="email" placeholder="Email Address" id="email"><a class="sign-up" href="#">Sign up</a>
 				<div class="clear"></div>
 			</div>
 			
-			<div id="social" class="footer-content">
+			<div class="footer-content">
 				<h3>Stay Connected</h3>
-				<div class="social">
-					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Like us on Facebook</a>
-					<a href=""><i class="fa fa-instagram" aria-hidden="true"></i>Follow us on Instagram</a>
-					<a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>Connect on LinkedIn</a>
-				</div>
+				<ul class="social fa-ul">
+					<li><a href="#"><i class="fa-li fa fa-facebook" aria-hidden="true"></i>Like us on Facebook</a></li>
+					<li><a href=""><i class="fa-li fa fa-instagram" aria-hidden="true"></i>Follow us on Instagram</a></li>
+					<li><a href=""><i class="fa-li fa fa-linkedin" aria-hidden="true"></i>Connect on LinkedIn</a></li>
+				</ul>
 			</div>
 		<div class="clear"></div>
 		</footer>
