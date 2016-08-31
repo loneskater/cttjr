@@ -229,6 +229,7 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 	line-height: 1.5;
+	-webkit-font-smoothing: antialiased 
 }
 
 body {
@@ -456,9 +457,8 @@ a.active {
 	line-height: 1;
 }
 
-.home-content p {
-	font-size: 15px;
-	width: 40%;
+.home-content h3 {
+	width: 50%;
 	padding-bottom: 50px;
 	margin: 0 auto;
 }
@@ -472,8 +472,12 @@ a.active {
 }
 
 @media (max-width: 768px) {
-	#home {
-		font-size: 0.7em;
+	.home-content h1 {
+		font-size: 3em;
+	}
+	.home-content  h3 {
+		width: 90%;
+		font-size: 1.2em;
 	}
 }
 
