@@ -321,7 +321,7 @@ a.active {
 	color: #84d2eb;
 }
 
-a.logo {
+.logo {
 	float: left;
 	padding: 15px 0;
 }
@@ -355,13 +355,18 @@ a.logo {
 
 @media (max-width: 1030px) {
 	.site-header {
-		height: 60px;
+		height: 90px;
 		padding: 0 30px;
 		background-color: #333333;
 	}
 
-	a.logo {
-		padding: 4px 0;
+	.site-branding img {
+		    clip: rect(0px,60px,200px,0px);
+    position: absolute;
+
+	}
+	.logo {
+		padding: 25px 0;
 	}
 
     .menu {
@@ -416,13 +421,11 @@ a.logo {
         padding: 0 20px;
         float:right;
         display:inline-block;
-        box-shadow:0px 1px 1px rgba(0,0,0,0.15);
-        background:#303030;
-        text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+        background: #333333;
         color:#777;
         font-size:20px;
         transition:color linear 0.15s;
-        line-height: 60px;
+        line-height: 90px;
     }
  
     .toggle-nav:hover, .toggle-nav.active {
